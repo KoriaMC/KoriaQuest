@@ -1,0 +1,162 @@
+{
+  "facile": {
+    "carriere": {
+      "actif": true,
+      "nom": "&7La carrière",
+      "type": "CASSER_BLOC",
+      "cibles": ["STONE", "COBBLESTONE"],
+      "objectif": 5000,
+      "par-membre": 250,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "STONE_PICKAXE",
+      "description": ["&7Cassez &f{objectif} &7blocs de pierre", "&7tous ensemble."],
+      "recompenses": []
+    },
+    "bucherons": {
+      "actif": true,
+      "nom": "&6Les bûcherons",
+      "type": "CASSER_BLOC",
+      "cibles": ["LOG", "LOG_2"],
+      "objectif": 2000,
+      "par-membre": 100,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "IRON_AXE",
+      "description": ["&7Coupez &f{objectif} &7bûches."],
+      "recompenses": []
+    },
+    "nettoyage": {
+      "actif": true,
+      "nom": "&2Grand nettoyage",
+      "type": "TUER_MOB",
+      "cibles": ["ZOMBIE", "SKELETON", "SPIDER", "CREEPER"],
+      "objectif": 300,
+      "par-membre": 20,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "ROTTEN_FLESH",
+      "description": ["&7Tuez &f{objectif} &7monstres", "&7(zombies, squelettes, araignées, creepers)."],
+      "recompenses": []
+    },
+    "peche": {
+      "actif": true,
+      "nom": "&bPartie de pêche",
+      "type": "PECHER",
+      "cibles": [],
+      "objectif": 200,
+      "par-membre": 10,
+      "mondes": [],
+      "zones": [],
+      "poids": 6,
+      "icone": "FISHING_ROD",
+      "description": ["&7Pêchez &f{objectif} &7fois."],
+      "recompenses": []
+    }
+  },
+  "moyen": {
+    "fer": {
+      "actif": true,
+      "nom": "&fL'âge du fer",
+      "type": "CASSER_BLOC",
+      "cibles": ["IRON_ORE"],
+      "objectif": 800,
+      "par-membre": 40,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "IRON_ORE",
+      "description": ["&7Minez &f{objectif} &7minerais de fer."],
+      "recompenses": []
+    },
+    "forge": {
+      "actif": true,
+      "nom": "&6La forge",
+      "type": "FONDRE",
+      "cibles": ["IRON_INGOT", "GOLD_INGOT"],
+      "objectif": 1000,
+      "par-membre": 50,
+      "mondes": [],
+      "zones": [],
+      "poids": 8,
+      "icone": "FURNACE",
+      "description": ["&7Faites fondre &f{objectif} &7lingots", "&7de fer ou d'or."],
+      "recompenses": []
+    },
+    "moisson": {
+      "actif": true,
+      "nom": "&eLa moisson",
+      "type": "RECOLTER",
+      "cibles": ["CROPS", "CARROT", "POTATO", "NETHER_WARTS"],
+      "objectif": 1500,
+      "par-membre": 75,
+      "mondes": [],
+      "zones": [],
+      "poids": 8,
+      "icone": "WHEAT",
+      "description": ["&7Récoltez &f{objectif} &7cultures mûres."],
+      "recompenses": []
+    },
+    "expansion": {
+      "actif": true,
+      "nom": "&aExpansion",
+      "type": "CLAIMER",
+      "cibles": [],
+      "objectif": 20,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 5,
+      "icone": "GRASS",
+      "description": ["&7Revendiquez &f{objectif} &7chunks."],
+      "recompenses": []
+    }
+  },
+  "difficile": {
+    "diamants": {
+      "actif": true,
+      "nom": "&bFièvre du diamant",
+      "type": "CASSER_BLOC",
+      "cibles": ["DIAMOND_ORE"],
+      "objectif": 300,
+      "par-membre": 15,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "DIAMOND_ORE",
+      "description": ["&7Minez &f{objectif} &7minerais de diamant."],
+      "recompenses": []
+    },
+    "guerre": {
+      "actif": true,
+      "nom": "&cEn guerre",
+      "type": "TUER_JOUEUR",
+      "cibles": ["ENEMY"],
+      "objectif": 100,
+      "par-membre": 5,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "DIAMOND_SWORD",
+      "description": ["&7Tuez &f{objectif} &7joueurs ennemis."],
+      "recompenses": []
+    },
+    "tresor": {
+      "actif": true,
+      "nom": "&5Le trésor de guerre",
+      "type": "LIVRER",
+      "cibles": ["DIAMOND_BLOCK"],
+      "objectif": 64,
+      "par-membre": 4,
+      "mondes": [],
+      "zones": [],
+      "poids": 6,
+      "icone": "DIAMOND_BLOCK",
+      "description": ["&7Livrez &f{objectif} &7blocs de diamant", "&7en cliquant sur la quête."],
+      "recompenses": []
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "debug": false,
+  "stockage": {
+    "type": "JSON",
+    "sauvegarde-auto-minutes": 5,
+    "copies-de-securite": 3,
+    "json-indente": false,
+    "sqlite-fichier": "donnees.db",
+    "mysql": {
+      "hote": "localhost",
+      "port": 3306,
+      "base": "koriaquest",
+      "utilisateur": "root",
+      "mot-de-passe": "",
+      "prefixe-tables": "kq_",
+      "parametres": "?useSSL=false&characterEncoding=utf8"
+    }
+  },
+  "commande": {
+    "nom": "quests",
+    "alias": ["quest", "q"],
+    "description": "Quêtes hebdomadaires"
+  },
+  "commandes": {
+    "help": { "actif": true, "alias": ["?"], "permission": "koriaquest.command.help" },
+    "menu": { "actif": true, "alias": ["gui"], "permission": "koriaquest.command.menu" },
+    "faction": { "actif": true, "alias": ["f", "team"], "permission": "koriaquest.command.faction" },
+    "difficulty": { "actif": true, "alias": ["diff", "choose"], "permission": "koriaquest.command.difficulty" },
+    "time": { "actif": true, "alias": ["timer", "remaining"], "permission": "koriaquest.command.time" },
+    "view": { "actif": true, "alias": ["see", "check"], "permission": "koriaquest.admin.view" },
+    "progress": { "actif": true, "alias": ["setprogress"], "permission": "koriaquest.admin.progress" },
+    "reset": { "actif": true, "alias": [], "permission": "koriaquest.admin.reset" },
+    "renew": { "actif": true, "alias": ["reroll"], "permission": "koriaquest.admin.renew" },
+    "config": { "actif": true, "alias": ["configuration", "cfg"], "permission": "koriaquest.admin.config" },
+    "save": { "actif": true, "alias": [], "permission": "koriaquest.admin.save" },
+    "reload": { "actif": true, "alias": ["rl"], "permission": "koriaquest.admin.reload" }
+  },
+  "cycle": {
+    "jour": "LUNDI",
+    "heure": "00:00",
+    "fuseau": "Europe/Paris",
+    "annonce-nouvelle-semaine": true,
+    "rappel-quetes-non-terminees": true
+  },
+  "cycle-joueur": {
+    "periode": "QUOTIDIEN",
+    "heure": "00:00",
+    "annonce-renouvellement": true
+  },
+  "difficultes": {
+    "facile": { "nom": "&aFacile", "argument": "easy" },
+    "moyen": { "nom": "&6Moyen", "argument": "medium" },
+    "difficile": { "nom": "&cDifficile", "argument": "hard" }
+  },
+  "quetes-faction": {
+    "actif": true,
+    "nombre": { "facile": 1, "moyen": 1, "difficile": 1 },
+    "membres-minimum": 1,
+    "prevenir-la-faction": true,
+    "annonce-globale": false
+  },
+  "quetes-joueur": {
+    "actif": true,
+    "nombre": 3,
+    "changer-difficulte": false,
+    "confirmation-choix": true,
+    "sans-faction": "BLOQUER",
+    "ouvrir-choix-automatiquement": true
+  },
+  "anti-abus": {
+    "mondes-desactives": [],
+    "ignorer-creatif": true,
+    "ignorer-blocs-poses": true,
+    "blocs-poses-memoire-max": 200000,
+    "ignorer-mobs-spawner": true,
+    "ignorer-mobs-oeufs": true,
+    "delai-meme-victime-minutes": 30,
+    "ignorer-meme-ip": true,
+    "afk-minutes": 5,
+    "parcourir-en-vehicule": false
+  },
+  "notifications": {
+    "progression-actionbar": true,
+    "paliers-pourcentage": [25, 50, 75],
+    "sons": {
+      "progression": "",
+      "palier": "ORB_PICKUP",
+      "quete-terminee": "LEVEL_UP",
+      "bonus": "ENDERDRAGON_GROWL:0.6:1.2",
+      "choix-difficulte": "NOTE_PLING",
+      "clic-menu": "CLICK:0.5:1",
+      "erreur": "VILLAGER_NO"
+    }
+  },
+  "affichage": {
+    "barre": { "longueur": 20, "symbole": "|", "couleur-pleine": "&a", "couleur-vide": "&8" },
+    "contributeurs-affiches": 5,
+    "decimales-pourcentage": 0
+  },
+  "titres": { "apparition": 5, "duree": 40, "disparition": 10 }
+}

@@ -1,0 +1,24 @@
+name: KoriaQuest
+version: 1.0.0
+main: fr.koriamc.quest.KoriaQuest
+author: KoriaMC
+description: Quêtes hebdomadaires de faction et de joueur pour KoriaMC (Spigot 1.8.8)
+depend: [KoriaFactions]
+softdepend: [Vault, PlaceholderAPI]
+
+# La commande principale (/quests par défaut) et ses alias sont enregistrés dynamiquement
+# depuis config.json : ils ne sont donc pas déclarés ici.
+
+permissions:
+  koriaquest.*:
+    description: Accès complet à KoriaQuest
+    default: op
+    children:
+      koriaquest.player: true
+      koriaquest.admin: true
+  koriaquest.player:
+    description: Commandes joueur (les nœuds exacts sont définis dans config.json)
+    default: true
+  koriaquest.admin:
+    description: Commandes d'administration (les nœuds exacts sont définis dans config.json)
+    default: op

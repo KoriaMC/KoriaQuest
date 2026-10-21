@@ -1,0 +1,144 @@
+{
+  "prefix": "&8[&6Quêtes&8] &r",
+  "general": {
+    "no-permission": "{prefix}&cVous n'avez pas la permission.",
+    "players-only": "{prefix}&cCette commande est réservée aux joueurs.",
+    "unknown-command": "{prefix}&cCommande inconnue. Faites &f/{label} help&c.",
+    "usage": "{prefix}&cUsage : &f/{label} {command} {usage}",
+    "error": "{prefix}&cUne erreur est survenue, prévenez un administrateur.",
+    "unknown-player": "{prefix}&cJoueur inconnu : &f{player}",
+    "unknown-faction": "{prefix}&cFaction inconnue : &f{faction}",
+    "invalid-number": "{prefix}&c« {input} » n'est pas un nombre valide.",
+    "reload-done": "{prefix}&aConfiguration rechargée ({quests} quêtes chargées).",
+    "reload-problems": "{prefix}&c{count} problème(s) détecté(s) :",
+    "reload-problem": "&8- &c{problem}",
+    "saved": "{prefix}&aDonnées sauvegardées.",
+    "disabled-world": "{prefix}&cLes quêtes ne progressent pas dans ce monde."
+  },
+  "help": {
+    "header": "&6&m-------&r &eKoriaQuest &6&m-------",
+    "line": "&e/{label} {command} &7{usage} &8- &f{description}",
+    "footer": "&6&m-----------------------------",
+    "commands": {
+      "help": { "usage": "", "description": "Affiche cette aide" },
+      "menu": { "usage": "", "description": "Ouvre tes quêtes" },
+      "faction": { "usage": "", "description": "Ouvre les quêtes de ta faction" },
+      "difficulty": { "usage": "[difficulty]", "description": "Choisit la difficulté de tes quêtes" },
+      "time": { "usage": "", "description": "Temps avant les nouvelles quêtes joueur et de faction" },
+      "view": { "usage": "<player>", "description": "Affiche les quêtes d'un joueur et de sa faction" },
+      "progress": {
+        "usage": "<player|faction> <name> <quest #> <value>",
+        "description": "Définit la progression d'une quête"
+      },
+      "reset": { "usage": "<player|faction> <name>", "description": "Réinitialise les quêtes en cours d'un joueur ou d'une faction" },
+      "renew": { "usage": "[all|faction|player]", "description": "Renouvelle les quêtes de tout le monde immédiatement" },
+      "config": { "usage": "[file]", "description": "Éditeur de configuration en jeu" },
+      "save": { "usage": "", "description": "Sauvegarde les données" },
+      "reload": { "usage": "", "description": "Recharge la configuration" }
+    }
+  },
+  "quest": {
+    "progress": "[actionbar]&e{quete} &8» &f{progression}&7/&f{objectif} &8(&a{pourcentage}%&8)",
+    "milestone": "{prefix}&7Quête &e{quete} &7: &f{pourcentage}% &7({progression}/{objectif}).",
+    "complete": ["{prefix}&aQuête &f{quete} &aterminée !", "[title]&aQuête terminée !;;&f{quete}"],
+    "complete-rewards": "&8- {recompense}",
+    "faction-complete": [
+      "{prefix}&bQuête de faction &f{quete} &bterminée ! &6+{points} points &7pour &f{faction}&7.",
+      "[title]&bQuête de faction terminée !;;&f{quete}"
+    ],
+    "faction-complete-broadcast": "{prefix}&7La faction &b{faction} &7a terminé la quête &f{quete}&7.",
+    "failed": "{prefix}&cTemps écoulé : la quête &f{quete} &cn'a pas été complétée ({progression}/{objectif}).",
+    "faction-failed": "{prefix}&cSemaine terminée : la quête de faction &f{quete} &cn'a pas été complétée.",
+    "deliver-none": "{prefix}&cTu n'as aucun objet à livrer pour cette quête.",
+    "deliver-done": "{prefix}&aTu as livré &f{quantite} &aobjet(s) pour &f{quete}&a.",
+    "no-faction": "{prefix}&cTu dois être dans une faction.",
+    "no-faction-points": "{prefix}&7Tu n'as pas de faction : les points de cette quête sont perdus.",
+    "faction-too-small": "{prefix}&cTa faction doit compter au moins &f{min} &cmembres pour avoir des quêtes.",
+    "faction-disabled": "{prefix}&cLes quêtes de faction sont désactivées.",
+    "player-disabled": "{prefix}&cLes quêtes joueur sont désactivées.",
+    "none-available": "{prefix}&cAucune quête n'est disponible pour cette difficulté."
+  },
+  "bonus": {
+    "player": [
+      "{prefix}&6&lBONUS &eTu as terminé toutes tes quêtes {difficulte} &edu jour !",
+      "[title]&6Bonus débloqué !;;&eToutes tes quêtes sont terminées"
+    ],
+    "faction": [
+      "{prefix}&6&lBONUS &eLa faction a terminé {terminees} quête(s) de faction cette semaine !",
+      "[title]&6Bonus de faction !;;&e{terminees} quêtes terminées"
+    ]
+  },
+  "difficulty": {
+    "chosen": "{prefix}&7Difficulté choisie : {difficulte}&7. Bonne chance !",
+    "locked": "{prefix}&cTu as déjà choisi ta difficulté pour aujourd'hui.",
+    "unknown": "{prefix}&cDifficulté inconnue. Disponibles : &f{difficultes}",
+    "confirm": "{prefix}&eClique à nouveau dans les 5 secondes pour confirmer {difficulte}&e.",
+    "not-chosen": "{prefix}&7Tu n'as pas encore choisi ta difficulté : &f/{label} difficulty"
+  },
+  "cycle": {
+    "new-week": ["{prefix}&6&lNOUVELLE SEMAINE &eLes quêtes de faction ont été renouvelées !", "{prefix}&7Voir : &f/{label} faction"],
+    "new-player-period": ["{prefix}&6&lNOUVELLES QUÊTES &eTes quêtes du jour sont disponibles !", "{prefix}&7Choisis ta difficulté : &f/{label}"],
+    "time-left": [
+      "{prefix}&7Nouvelles quêtes joueur dans &f{temps_joueur}&7.",
+      "{prefix}&7Nouvelles quêtes de faction dans &f{temps_faction}&7."
+    ]
+  },
+  "rewards": {
+    "pending": "{prefix}&aTu as reçu des récompenses pendant ton absence.",
+    "inventory-full": "{prefix}&eInventaire plein : des objets ont été déposés au sol.",
+    "none": "&7Aucune",
+    "describe": {
+      "points": "&6{quantite} points de faction",
+      "money": "&e{quantite}$",
+      "item": "&f{quantite}x {objet}"
+    }
+  },
+  "admin": {
+    "view-header": "&6&m------&r &e{player} &6&m------",
+    "view-difficulty": "&7Difficulté : {difficulte}",
+    "view-faction": "&7Faction : &f{faction} &7({terminees}/{total} quêtes)",
+    "view-quest": "&8{numero}. {etat}&f{quete} &7{progression}/{objectif}",
+    "state-done": "&a[OK] ",
+    "state-running": "&e[..] ",
+    "progress-set": "{prefix}&aProgression de &f{quete} &a: &f{progression}&7/&f{objectif}",
+    "no-quest": "{prefix}&cAucune quête n°{numero} en cours.",
+    "reset-player": "{prefix}&aQuêtes de &f{player} &aréinitialisées.",
+    "reset-faction": "{prefix}&aQuêtes de la faction &f{faction} &aréinitialisées.",
+    "renewed-faction": "{prefix}&aQuêtes de faction renouvelées : nouveau tirage effectué.",
+    "renewed-player": "{prefix}&aQuêtes joueur renouvelées : chacun doit rechoisir sa difficulté."
+  },
+  "values": {
+    "none": "Aucune",
+    "no-faction": "Aucune"
+  },
+  "time": {
+    "days": "j",
+    "hours": "h",
+    "minutes": "min",
+    "seconds": "s",
+    "now": "maintenant",
+    "never": "jamais"
+  },
+  "config-editor": {
+    "cancel-word": "annuler",
+    "empty-word": "vide",
+    "prompt": "{prefix}&eÉcrivez la nouvelle valeur de &f{path} &edans le chat (&f{empty} &epour une valeur vide, &f{cancel} &epour annuler).",
+    "prompt-current": "&7Valeur actuelle : &f",
+    "prompt-list-add": "{prefix}&eÉcrivez la valeur à ajouter à &f{path} &e(&f{cancel} &epour annuler).",
+    "prompt-list-replace": "{prefix}&eÉcrivez toutes les valeurs de &f{path}&e, séparées par des virgules (&f{cancel} &epour annuler).",
+    "prompt-add": "{prefix}&eÉcrivez le nom de la nouvelle entrée de &f{path} &e(&f{cancel} &epour annuler).",
+    "cancelled": "{prefix}&7Modification annulée.",
+    "saved": "{prefix}&a{file} : &f{path} &a= &f{value}",
+    "reset": "{prefix}&a{file} : &f{path} &areprend sa valeur par défaut.",
+    "removed": "{prefix}&a{file} : &f{path} &asupprimé.",
+    "added": "{prefix}&a{file} : &f{path} &aajouté.",
+    "confirm-remove": "{prefix}&eRefaites Ctrl + Q dans les 5 secondes pour confirmer (&f{path}&e).",
+    "invalid-number": "{prefix}&c« {input} » n'est pas un nombre.",
+    "invalid-key": "{prefix}&cNom invalide : lettres, chiffres, - _ et : uniquement.",
+    "exists": "{prefix}&cL'entrée &f{key} &cexiste déjà.",
+    "empty-section": "{prefix}&cSection vide : ajoutez la première entrée dans le fichier.",
+    "save-error": "{prefix}&cImpossible d'enregistrer {file} : {error}",
+    "restart": "{prefix}&eCe réglage sera appliqué au prochain redémarrage du serveur.",
+    "unknown-file": "{prefix}&cFichier inconnu : &f{file}&c. Fichiers : config, quests_faction, quests_player, rewards, messages, menus."
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "joueur": {
+    "titre": "&8Mes quêtes &7» {difficulte}",
+    "lignes": 4,
+    "fond": { "materiau": "STAINED_GLASS_PANE:7", "nom": " " },
+    "quetes": {
+      "cases": [11, 13, 15],
+      "en-cours": {
+        "materiau": "{icone}",
+        "nom": "&e{quete}",
+        "description": [
+          "{description}",
+          "",
+          "&7Progression : &f{progression}&7/&f{objectif}",
+          "{barre} &f{pourcentage}%",
+          "",
+          "&7Récompenses :",
+          "&8- {recompenses}",
+          "{livrer}"
+        ],
+        "clic": "LIVRER"
+      },
+      "terminee": {
+        "materiau": "{icone}",
+        "brillant": true,
+        "nom": "&a{quete} &2(terminée)",
+        "description": ["{description}", "", "&aQuête terminée !", "", "&7Récompenses reçues :", "&8- {recompenses}"]
+      }
+    },
+    "textes": {
+      "livrer": "&eClic : livrer les objets de ton inventaire",
+      "bonus-obtenu": "&aBonus obtenu !",
+      "bonus-a-obtenir": "&7Encore &f{restantes} &7quête(s) à terminer.",
+      "sans-difficulte": "&7Aucune"
+    },
+    "objets": {
+      "infos": {
+        "case": 4,
+        "materiau": "BOOK",
+        "nom": "&6Quêtes du jour",
+        "description": [
+          "&7Difficulté : {difficulte}",
+          "&7Terminées : &f{terminees}&7/&f{total}",
+          "&7Nouvelles quêtes dans : &f{temps_restant}"
+        ]
+      },
+      "bonus": {
+        "case": 31,
+        "materiau": "NETHER_STAR",
+        "nom": "&6Bonus du jour",
+        "description": ["&7Termine tes &f{total} &7quêtes pour obtenir :", "&8- {bonus}", "", "{bonus_etat}"]
+      },
+      "faction": {
+        "case": 27,
+        "materiau": "BANNER:4",
+        "nom": "&bQuêtes de faction",
+        "description": ["&7Les quêtes communes", "&7de ta faction.", "", "&eClic : ouvrir"],
+        "action": "MENU:faction"
+      },
+      "fermer": { "case": 35, "materiau": "BARRIER", "nom": "&cFermer", "action": "FERMER" }
+    }
+  },
+  "difficulte": {
+    "titre": "&8Choisis ta difficulté",
+    "lignes": 3,
+    "fond": { "materiau": "STAINED_GLASS_PANE:15", "nom": " " },
+    "objets": {
+      "facile": {
+        "case": 11,
+        "materiau": "WOOL:5",
+        "nom": "&a&lFacile",
+        "description": [
+          "&7{nombre} quêtes faciles aujourd'hui.",
+          "",
+          "&7Par quête :",
+          "&8- {recompenses_facile}",
+          "&7Bonus si tout est terminé :",
+          "&8- {bonus_facile}",
+          "",
+          "&eClic : choisir"
+        ],
+        "action": "CHOISIR:facile"
+      },
+      "moyen": {
+        "case": 13,
+        "materiau": "WOOL:1",
+        "nom": "&6&lMoyen",
+        "description": [
+          "&7{nombre} quêtes moyennes aujourd'hui.",
+          "",
+          "&7Par quête :",
+          "&8- {recompenses_moyen}",
+          "&7Bonus si tout est terminé :",
+          "&8- {bonus_moyen}",
+          "",
+          "&eClic : choisir"
+        ],
+        "action": "CHOISIR:moyen"
+      },
+      "difficile": {
+        "case": 15,
+        "materiau": "WOOL:14",
+        "nom": "&c&lDifficile",
+        "description": [
+          "&7{nombre} quêtes difficiles aujourd'hui.",
+          "",
+          "&7Par quête :",
+          "&8- {recompenses_difficile}",
+          "&7Bonus si tout est terminé :",
+          "&8- {bonus_difficile}",
+          "",
+          "&eClic : choisir"
+        ],
+        "action": "CHOISIR:difficile"
+      },
+      "infos": {
+        "case": 4,
+        "materiau": "PAPER",
+        "nom": "&eAttention",
+        "description": ["&7Le choix est définitif jusqu'aux", "&7prochaines quêtes (&f{temps_restant}&7)."]
+      },
+      "faction": {
+        "case": 18,
+        "materiau": "BANNER:4",
+        "nom": "&bQuêtes de faction",
+        "description": ["&eClic : ouvrir"],
+        "action": "MENU:faction"
+      },
+      "fermer": { "case": 26, "materiau": "BARRIER", "nom": "&cFermer", "action": "FERMER" }
+    }
+  },
+  "faction": {
+    "titre": "&8Quêtes de {faction}",
+    "lignes": 4,
+    "fond": { "materiau": "STAINED_GLASS_PANE:11", "nom": " " },
+    "quetes": {
+      "cases": [11, 13, 15],
+      "en-cours": {
+        "materiau": "{icone}",
+        "nom": "&b{quete} &7({difficulte})",
+        "description": [
+          "{description}",
+          "",
+          "&7Progression : &f{progression}&7/&f{objectif}",
+          "{barre} &f{pourcentage}%",
+          "&7Ta contribution : &f{contribution}",
+          "",
+          "&7Meilleurs contributeurs :",
+          "{contributeurs}",
+          "",
+          "&7Récompenses :",
+          "&8- {recompenses}",
+          "{livrer}"
+        ],
+        "clic": "LIVRER"
+      },
+      "terminee": {
+        "materiau": "{icone}",
+        "brillant": true,
+        "nom": "&a{quete} &2(terminée)",
+        "description": [
+          "{description}",
+          "",
+          "&aQuête terminée !",
+          "&7Ta contribution : &f{contribution}",
+          "",
+          "&7Meilleurs contributeurs :",
+          "{contributeurs}"
+        ]
+      }
+    },
+    "textes": {
+      "livrer": "&eClic : livrer les objets de ton inventaire",
+      "contributeur": "&7{rang}. &f{joueur} &8- &e{quantite}",
+      "aucun-contributeur": "&8Personne pour l'instant",
+      "bonus-obtenu": "&aBonus obtenu !",
+      "bonus-a-obtenir": "&7Encore &f{restantes} &7quête(s) à terminer."
+    },
+    "objets": {
+      "infos": {
+        "case": 4,
+        "materiau": "BANNER:4",
+        "nom": "&b{faction}",
+        "description": [
+          "&7Quêtes terminées : &f{terminees}&7/&f{total}",
+          "&7Points de faction : &6{points}",
+          "&7Nouvelles quêtes dans : &f{temps_restant}"
+        ]
+      },
+      "bonus": {
+        "case": 31,
+        "materiau": "NETHER_STAR",
+        "nom": "&6Bonus de faction",
+        "description": ["&7Terminez les &f{total} &7quêtes pour obtenir :", "&8- {bonus}", "", "{bonus_etat}"]
+      },
+      "retour": { "case": 27, "materiau": "ARROW", "nom": "&7Mes quêtes", "action": "MENU:joueur" },
+      "fermer": { "case": 35, "materiau": "BARRIER", "nom": "&cFermer", "action": "FERMER" }
+    }
+  },
+  "editeur": {
+    "titre-fichiers": "&8Configuration KoriaQuest",
+    "lignes-fichiers": 3,
+    "fond": { "materiau": "STAINED_GLASS_PANE:7", "nom": " " },
+    "fichiers": {
+      "config": {
+        "case": 10,
+        "materiau": "COMMAND",
+        "nom": "&6config.json",
+        "description": ["&7Stockage, commandes, cycle, difficultés,", "&7anti-abus, notifications, affichage.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:config"
+      },
+      "quests_faction": {
+        "case": 11,
+        "materiau": "BANNER:4",
+        "nom": "&6quests_faction.json",
+        "description": ["&7Quêtes de faction", "&7par difficulté.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:quests_faction"
+      },
+      "quests_player": {
+        "case": 12,
+        "materiau": "SKULL_ITEM:3",
+        "nom": "&6quests_player.json",
+        "description": ["&7Quêtes joueur", "&7par difficulté.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:quests_player"
+      },
+      "rewards": {
+        "case": 14,
+        "materiau": "GOLD_INGOT",
+        "nom": "&6rewards.json",
+        "description": ["&7Récompenses par quête", "&7et bonus par palier.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:rewards"
+      },
+      "messages": {
+        "case": 15,
+        "materiau": "BOOK_AND_QUILL",
+        "nom": "&6messages.json",
+        "description": ["&7Tous les textes affichés", "&7aux joueurs.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:messages"
+      },
+      "menus": {
+        "case": 16,
+        "materiau": "CHEST",
+        "nom": "&6menus.json",
+        "description": ["&7Apparence et clics", "&7de tous les menus.", "", "&eClic : ouvrir"],
+        "action": "MENU:config:menus"
+      },
+      "fermer": { "case": 22, "materiau": "BARRIER", "nom": "&cFermer", "action": "FERMER" }
+    },
+    "titre-section": "&8{file} &7» &f{section}",
+    "lignes-section": 6,
+    "cases-options": [
+      0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32,
+      33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44
+    ],
+    "texte-defaut": "&8(valeur par défaut, absente du fichier)",
+    "texte-reinitialiser": "&8Ctrl + Q : revenir à la valeur par défaut",
+    "texte-supprimer": "&cCtrl + Q : supprimer cette entrée",
+    "mot-de-passe-masque": "******",
+    "liste-lignes-max": 8,
+    "liste-suite": "&8...",
+    "types": {
+      "section": {
+        "materiau": "CHEST",
+        "nom": "&6{key}",
+        "description": ["&7{doc}", "&8{count} option(s)", "", "&eClic : ouvrir", "{effacer}"],
+        "clic": "OUVRIR",
+        "ctrl-q": "DEFAUT"
+      },
+      "section-libre": {
+        "materiau": "ENDER_CHEST",
+        "nom": "&6{key}",
+        "description": ["&7{doc}", "&8{count} option(s)", "", "&eClic : ouvrir", "{effacer}"],
+        "clic": "OUVRIR",
+        "ctrl-q": "DEFAUT"
+      },
+      "oui": {
+        "materiau": "INK_SACK:10",
+        "nom": "&f{key}",
+        "description": ["&7{doc}", "&7Valeur : &aOui", "", "&eClic : désactiver", "{defaut}", "{effacer}"],
+        "clic": "BASCULER",
+        "ctrl-q": "DEFAUT"
+      },
+      "non": {
+        "materiau": "INK_SACK:8",
+        "nom": "&f{key}",
+        "description": ["&7{doc}", "&7Valeur : &cNon", "", "&eClic : activer", "{defaut}", "{effacer}"],
+        "clic": "BASCULER",
+        "ctrl-q": "DEFAUT"
+      },
+      "nombre": {
+        "materiau": "GOLD_NUGGET",
+        "nom": "&f{key}",
+        "description": [
+          "&7{doc}",
+          "&7Valeur : &f{value}",
+          "",
+          "&eClic gauche : &f+{step} &8| &eClic droit : &f-{step}",
+          "&eShift + clic : &f±{big}",
+          "&eQ : saisir au clavier",
+          "{defaut}",
+          "{effacer}"
+        ],
+        "clic-gauche": "AUGMENTER:1",
+        "clic-droit": "DIMINUER:1",
+        "shift-clic-gauche": "AUGMENTER:10",
+        "shift-clic-droit": "DIMINUER:10",
+        "touche-q": "SAISIR",
+        "ctrl-q": "DEFAUT"
+      },
+      "texte": {
+        "materiau": "PAPER",
+        "nom": "&f{key}",
+        "description": ["&7{doc}", "&7Valeur : &f{value}", "", "&eClic : modifier au clavier", "{defaut}", "{effacer}"],
+        "clic": "SAISIR",
+        "ctrl-q": "DEFAUT"
+      },
+      "choix": {
+        "materiau": "NAME_TAG",
+        "nom": "&f{key}",
+        "description": [
+          "&7{doc}",
+          "&7Valeur : &f{value}",
+          "&8Choix : {choices}",
+          "",
+          "&eClic gauche / droit : valeur suivante / précédente",
+          "&eQ : saisir au clavier",
+          "{defaut}",
+          "{effacer}"
+        ],
+        "clic-gauche": "CHOIX-SUIVANT",
+        "clic-droit": "CHOIX-PRECEDENT",
+        "touche-q": "SAISIR",
+        "ctrl-q": "DEFAUT"
+      },
+      "liste": {
+        "materiau": "BOOK",
+        "nom": "&f{key}",
+        "description": [
+          "&7{doc}",
+          "&7Liste de &f{count} &7valeur(s) :",
+          "&8- &f{list}",
+          "",
+          "&eClic gauche : ajouter une valeur",
+          "&eClic droit : retirer la dernière",
+          "&eShift + clic : remplacer toute la liste",
+          "{defaut}",
+          "{effacer}"
+        ],
+        "clic-gauche": "AJOUTER",
+        "clic-droit": "RETIRER",
+        "shift-clic": "REMPLACER",
+        "ctrl-q": "DEFAUT"
+      },
+      "complexe": {
+        "materiau": "BARRIER",
+        "nom": "&f{key}",
+        "description": ["&7{doc}", "&cModifiable uniquement dans le fichier", "{effacer}"],
+        "ctrl-q": "DEFAUT"
+      }
+    },
+    "info": {
+      "case": 49,
+      "materiau": "BOOK",
+      "nom": "&e{file}",
+      "description": [
+        "&7Section : &f{path}",
+        "&7{doc}",
+        "",
+        "&7Chaque modification est enregistrée",
+        "&7dans le fichier et appliquée aussitôt."
+      ]
+    },
+    "retour": { "case": 45, "materiau": "ARROW", "nom": "&cRetour", "action": "RETOUR" },
+    "precedent": { "case": 48, "materiau": "PAPER", "nom": "&ePage précédente", "action": "PAGE-PRECEDENTE" },
+    "suivant": { "case": 50, "materiau": "PAPER", "nom": "&ePage suivante", "action": "PAGE-SUIVANTE" },
+    "ajouter": {
+      "case": 53,
+      "materiau": "EMERALD",
+      "nom": "&aAjouter une entrée",
+      "description": ["&7Copie la dernière entrée", "&7sous un nouveau nom."],
+      "action": "AJOUTER-ENTREE"
+    }
+  }
+}
