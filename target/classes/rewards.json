@@ -1,39 +1,24 @@
 {
   "faction": {
     "par-quete": {
-      "facile": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:50"], "texte": [] },
-      "moyen": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:120"], "texte": [] },
-      "difficile": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:250", "ARGENT:500"], "texte": [] }
+      "facile": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:1000"], "texte": [] },
+      "moyen": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:2000"], "texte": [] },
+      "difficile": { "cible": "CONTRIBUTEURS", "recompenses": ["POINTS:3000"], "texte": [] }
     },
-    "paliers": {
-      "3": {
-        "cible": "MEMBRES",
-        "recompenses": [
-          "POINTS:200",
-          "ARGENT:1000",
-          "ANNONCE:{prefix}&6La faction &e{faction} &6a terminé toutes ses quêtes de la semaine !"
-        ],
-        "texte": []
-      }
-    }
+    "paliers": {}
   },
   "joueur": {
     "facile": {
-      "par-quete": { "recompenses": ["POINTS:10"], "texte": [] },
-      "paliers": { "3": { "recompenses": ["POINTS:20", "ARGENT:250"], "texte": [] } }
+      "par-quete": { "recompenses": ["POINTS:50"], "texte": [] },
+      "paliers": { "3": { "recompenses": ["POINTS:50"], "texte": [] } }
     },
     "moyen": {
-      "par-quete": { "recompenses": ["POINTS:25"], "texte": [] },
-      "paliers": { "3": { "recompenses": ["POINTS:50", "ARGENT:750"], "texte": [] } }
+      "par-quete": { "recompenses": ["POINTS:100"], "texte": [] },
+      "paliers": { "3": { "recompenses": ["POINTS:100"], "texte": [] } }
     },
     "difficile": {
-      "par-quete": { "recompenses": ["POINTS:60"], "texte": [] },
-      "paliers": {
-        "3": {
-          "recompenses": ["POINTS:120", "ARGENT:2000", "ITEM:DIAMOND:5", "SON:ENDERDRAGON_GROWL"],
-          "texte": []
-        }
-      }
+      "par-quete": { "recompenses": ["POINTS:150"], "texte": [] },
+      "paliers": { "3": { "recompenses": ["POINTS:150", "SON:ENDERDRAGON_GROWL"], "texte": [] } }
     }
   }
 }

@@ -37,6 +37,12 @@ public final class ObjectiveRegistry {
     public static final String LEVEL_UP = "MONTER_NIVEAU";
     public static final String DELIVER = "LIVRER";
     public static final String CLAIM = "CLAIMER";
+    /** Vente au shop : quantité d'objets vendus (signalé par le plugin de shop). */
+    public static final String SELL = "VENDRE";
+    /** Vente au shop : montant gagné en $ (signalé par le plugin de shop). */
+    public static final String SELL_MONEY = "VENDRE_ARGENT";
+    /** Victoire d'un évènement, cible = KOTH, TOTEM, DRAPEAU, FARM, PECHE (signalé par les plugins d'évènements). */
+    public static final String WIN_EVENT = "GAGNER_EVENEMENT";
 
     private final Map<String, ObjectiveType> types = new LinkedHashMap<String, ObjectiveType>();
 
@@ -62,6 +68,9 @@ public final class ObjectiveRegistry {
         register(new ObjectiveType(LEVEL_UP, Targets.NONE));
         register(new ObjectiveType(DELIVER, Targets.MATERIALS, true));
         register(new ObjectiveType(CLAIM, Targets.NONE));
+        register(new ObjectiveType(SELL, Targets.MATERIALS));
+        register(new ObjectiveType(SELL_MONEY, Targets.MATERIALS));
+        register(new ObjectiveType(WIN_EVENT, Targets.NAMES));
     }
 
     /** Ajoute (ou remplace) un type. */

@@ -36,10 +36,13 @@ public final class QuestDefinition {
     public final List<String> description;
     /** Récompenses propres à la quête (vide = celles de la difficulté dans rewards.json). */
     public final List<String> rewards;
+    /** Outils à tenir en main pour progresser (vide = n'importe lequel). */
+    public final MaterialSet tools;
 
     public QuestDefinition(QuestScope scope, String difficulty, String id, String name, String type, List<String> targets,
                            MaterialSet materials, Set<String> names, long objective, long perMember, Set<String> worlds,
-                           Set<String> zones, int weight, String icon, List<String> description, List<String> rewards) {
+                           Set<String> zones, int weight, String icon, List<String> description, List<String> rewards,
+                           MaterialSet tools) {
         this.scope = scope;
         this.difficulty = difficulty;
         this.id = id;
@@ -56,6 +59,7 @@ public final class QuestDefinition {
         this.icon = icon;
         this.description = Collections.unmodifiableList(description);
         this.rewards = Collections.unmodifiableList(rewards);
+        this.tools = tools;
     }
 
     /** Clé unique "difficulte.id", enregistrée dans la progression. */

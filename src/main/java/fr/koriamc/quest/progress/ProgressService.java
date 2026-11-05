@@ -89,6 +89,12 @@ public final class ProgressService {
                 || !def.worlds.contains(ctx.getLocation().getWorld().getName().toLowerCase(Locale.ROOT)))) {
             return false;
         }
+        if (!def.tools.isEmpty()) {
+            org.bukkit.inventory.ItemStack hand = ctx.getPlayer() == null ? null : ctx.getPlayer().getItemInHand();
+            if (hand == null || !def.tools.contains(hand.getTypeId(), Math.max(0, (int) hand.getDurability()))) {
+                return false;
+            }
+        }
         if (!def.zones.isEmpty()) {
             if (zone[0] == null) {
                 zone[0] = plugin.factionHook().getZone(ctx.getPlayer(), ctx.getLocation());

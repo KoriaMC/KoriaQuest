@@ -1,161 +1,345 @@
 {
   "facile": {
-    "carriere": {
+    "zombies": {
       "actif": true,
-      "nom": "&7La carrière",
-      "type": "CASSER_BLOC",
-      "cibles": ["STONE", "COBBLESTONE"],
-      "objectif": 5000,
-      "par-membre": 250,
-      "mondes": [],
-      "zones": [],
-      "poids": 10,
-      "icone": "STONE_PICKAXE",
-      "description": ["&7Cassez &f{objectif} &7blocs de pierre", "&7tous ensemble."],
-      "recompenses": []
-    },
-    "bucherons": {
-      "actif": true,
-      "nom": "&6Les bûcherons",
-      "type": "CASSER_BLOC",
-      "cibles": ["LOG", "LOG_2"],
-      "objectif": 2000,
-      "par-membre": 100,
-      "mondes": [],
-      "zones": [],
-      "poids": 10,
-      "icone": "IRON_AXE",
-      "description": ["&7Coupez &f{objectif} &7bûches."],
-      "recompenses": []
-    },
-    "nettoyage": {
-      "actif": true,
-      "nom": "&2Grand nettoyage",
+      "nom": "&2Chasseur de zombies",
       "type": "TUER_MOB",
-      "cibles": ["ZOMBIE", "SKELETON", "SPIDER", "CREEPER"],
-      "objectif": 300,
-      "par-membre": 20,
+      "cibles": ["ZOMBIE"],
+      "objectif": 150000,
+      "par-membre": 0,
       "mondes": [],
       "zones": [],
       "poids": 10,
       "icone": "ROTTEN_FLESH",
-      "description": ["&7Tuez &f{objectif} &7monstres", "&7(zombies, squelettes, araignées, creepers)."],
+      "description": [
+        "&7Tuez &f{objectif} &7zombies."
+      ],
       "recompenses": []
     },
-    "peche": {
+    "pierre": {
       "actif": true,
-      "nom": "&bPartie de pêche",
-      "type": "PECHER",
-      "cibles": [],
-      "objectif": 200,
-      "par-membre": 10,
+      "nom": "&7Mineur de pierre",
+      "type": "CASSER_BLOC",
+      "cibles": ["STONE"],
+      "objectif": 150000,
+      "par-membre": 0,
       "mondes": [],
       "zones": [],
-      "poids": 6,
-      "icone": "FISHING_ROD",
-      "description": ["&7Pêchez &f{objectif} &7fois."],
+      "poids": 10,
+      "icone": "STONE",
+      "description": [
+        "&7Minez &f{objectif} &7blocs de pierre."
+      ],
+      "recompenses": []
+    },
+    "patates": {
+      "actif": true,
+      "nom": "&eAgriculteur de pommes de terre",
+      "type": "RECOLTER",
+      "cibles": ["POTATO"],
+      "objectif": 150000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "POTATO_ITEM",
+      "description": [
+        "&7Récoltez &f{objectif} &7pommes de terre."
+      ],
+      "recompenses": []
+    },
+    "pigmen": {
+      "actif": true,
+      "nom": "&6Chasseur de pigmen",
+      "type": "TUER_MOB",
+      "cibles": ["PIG_ZOMBIE"],
+      "objectif": 150000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "GOLD_NUGGET",
+      "description": [
+        "&7Tuez &f{objectif} &7pigmen zombies."
+      ],
+      "recompenses": []
+    },
+    "redstone": {
+      "actif": true,
+      "nom": "&cMineur de redstone",
+      "type": "CASSER_BLOC",
+      "cibles": ["REDSTONE_ORE", "GLOWING_REDSTONE_ORE"],
+      "objectif": 30000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "REDSTONE_ORE",
+      "description": [
+        "&7Minez &f{objectif} &7minerais de redstone."
+      ],
+      "recompenses": []
+    },
+    "or": {
+      "actif": true,
+      "nom": "&eMarchand d'or",
+      "type": "VENDRE",
+      "cibles": ["GOLD_INGOT"],
+      "objectif": 50000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "GOLD_INGOT",
+      "description": [
+        "&7Vendez &f{objectif} &7lingots d'or au shop."
+      ],
+      "recompenses": []
+    },
+    "commerce": {
+      "actif": true,
+      "nom": "&aGrand commerçant",
+      "type": "VENDRE_ARGENT",
+      "cibles": [],
+      "objectif": 300000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "EMERALD",
+      "description": [
+        "&7Réalisez &f{objectif} $ &7de ventes au shop."
+      ],
       "recompenses": []
     }
   },
   "moyen": {
-    "fer": {
+    "commerce": {
       "actif": true,
-      "nom": "&fL'âge du fer",
-      "type": "CASSER_BLOC",
-      "cibles": ["IRON_ORE"],
-      "objectif": 800,
-      "par-membre": 40,
-      "mondes": [],
-      "zones": [],
-      "poids": 10,
-      "icone": "IRON_ORE",
-      "description": ["&7Minez &f{objectif} &7minerais de fer."],
-      "recompenses": []
-    },
-    "forge": {
-      "actif": true,
-      "nom": "&6La forge",
-      "type": "FONDRE",
-      "cibles": ["IRON_INGOT", "GOLD_INGOT"],
-      "objectif": 1000,
-      "par-membre": 50,
-      "mondes": [],
-      "zones": [],
-      "poids": 8,
-      "icone": "FURNACE",
-      "description": ["&7Faites fondre &f{objectif} &7lingots", "&7de fer ou d'or."],
-      "recompenses": []
-    },
-    "moisson": {
-      "actif": true,
-      "nom": "&eLa moisson",
-      "type": "RECOLTER",
-      "cibles": ["CROPS", "CARROT", "POTATO", "NETHER_WARTS"],
-      "objectif": 1500,
-      "par-membre": 75,
-      "mondes": [],
-      "zones": [],
-      "poids": 8,
-      "icone": "WHEAT",
-      "description": ["&7Récoltez &f{objectif} &7cultures mûres."],
-      "recompenses": []
-    },
-    "expansion": {
-      "actif": true,
-      "nom": "&aExpansion",
-      "type": "CLAIMER",
+      "nom": "&aMarchand confirmé",
+      "type": "VENDRE_ARGENT",
       "cibles": [],
-      "objectif": 20,
+      "objectif": 500000,
       "par-membre": 0,
       "mondes": [],
       "zones": [],
-      "poids": 5,
-      "icone": "GRASS",
-      "description": ["&7Revendiquez &f{objectif} &7chunks."],
+      "poids": 10,
+      "icone": "EMERALD",
+      "description": [
+        "&7Vendez pour &f{objectif} $ &7au shop."
+      ],
+      "recompenses": []
+    },
+    "pierre_krebbs": {
+      "actif": true,
+      "nom": "&bMineur de haut niveau",
+      "type": "CASSER_BLOC",
+      "cibles": ["STONE"],
+      "objectif": 250000,
+      "par-membre": 0,
+      "outils": ["KREBBS_PICKAXE"],
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "KREBBS_PICKAXE",
+      "description": [
+        "&7Minez &f{objectif} &7blocs de stone",
+        "&7avec la pioche en Krebbs."
+      ],
+      "recompenses": []
+    },
+    "araignees": {
+      "actif": true,
+      "nom": "&8Chasseur d'araignées",
+      "type": "TUER_MOB",
+      "cibles": ["SPIDER", "CAVE_SPIDER"],
+      "objectif": 300000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "STRING",
+      "description": [
+        "&7Tuez &f{objectif} &7araignées."
+      ],
+      "recompenses": []
+    },
+    "pommes_cheat": {
+      "actif": true,
+      "nom": "&6Fabricant de pommes cheat",
+      "type": "CRAFTER",
+      "cibles": ["GOLDEN_APPLE:1"],
+      "objectif": 300,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "GOLDEN_APPLE",
+      "description": [
+        "&7Craftez &f{objectif} &7pommes cheat."
+      ],
+      "recompenses": []
+    },
+    "ble": {
+      "actif": true,
+      "nom": "&eAgriculteur de blé",
+      "type": "RECOLTER",
+      "cibles": ["CROPS"],
+      "objectif": 300000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "WHEAT",
+      "description": [
+        "&7Récoltez &f{objectif} &7blés."
+      ],
+      "recompenses": []
+    },
+    "ficelle": {
+      "actif": true,
+      "nom": "&fMarchand de ficelle",
+      "type": "VENDRE",
+      "cibles": ["STRING"],
+      "objectif": 150000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "STRING",
+      "description": [
+        "&7Vendez &f{objectif} &7ficelles au shop."
+      ],
+      "recompenses": []
+    },
+    "randomores": {
+      "actif": true,
+      "nom": "&dMineur de Randomor",
+      "type": "CASSER_BLOC",
+      "cibles": ["RANDOM_ORE"],
+      "objectif": 5000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "RANDOM_ORE",
+      "description": [
+        "&7Minez &f{objectif} &7Randomors."
+      ],
       "recompenses": []
     }
   },
   "difficile": {
-    "diamants": {
+    "commerce": {
       "actif": true,
-      "nom": "&bFièvre du diamant",
-      "type": "CASSER_BLOC",
-      "cibles": ["DIAMOND_ORE"],
-      "objectif": 300,
-      "par-membre": 15,
+      "nom": "&6Roi du commerce",
+      "type": "VENDRE_ARGENT",
+      "cibles": [],
+      "objectif": 1000000,
+      "par-membre": 0,
       "mondes": [],
       "zones": [],
       "poids": 10,
-      "icone": "DIAMOND_ORE",
-      "description": ["&7Minez &f{objectif} &7minerais de diamant."],
+      "icone": "EMERALD_BLOCK",
+      "description": [
+        "&7Vendez pour &f{objectif} $ &7au shop."
+      ],
       "recompenses": []
     },
-    "guerre": {
+    "exterminateur": {
       "actif": true,
-      "nom": "&cEn guerre",
-      "type": "TUER_JOUEUR",
-      "cibles": ["ENEMY"],
-      "objectif": 100,
-      "par-membre": 5,
+      "nom": "&4Exterminateur de mobs",
+      "type": "TUER_MOB",
+      "cibles": [],
+      "objectif": 500000,
+      "par-membre": 0,
       "mondes": [],
       "zones": [],
       "poids": 10,
       "icone": "DIAMOND_SWORD",
-      "description": ["&7Tuez &f{objectif} &7joueurs ennemis."],
+      "description": [
+        "&7Tuez &f{objectif} &7mobs, peu importe leur type."
+      ],
       "recompenses": []
     },
-    "tresor": {
+    "agriculteur": {
       "actif": true,
-      "nom": "&5Le trésor de guerre",
-      "type": "LIVRER",
-      "cibles": ["DIAMOND_BLOCK"],
-      "objectif": 64,
-      "par-membre": 4,
+      "nom": "&2Maître agriculteur",
+      "type": "RECOLTER",
+      "cibles": ["NETHER_WARTS", "POTATO", "CARROT", "CROPS", "SUGAR_CANE_BLOCK", "MELON_BLOCK", "PUMPKIN"],
+      "objectif": 750000,
+      "par-membre": 0,
       "mondes": [],
       "zones": [],
-      "poids": 6,
-      "icone": "DIAMOND_BLOCK",
-      "description": ["&7Livrez &f{objectif} &7blocs de diamant", "&7en cliquant sur la quête."],
+      "poids": 10,
+      "icone": "GOLDEN_CARROT",
+      "description": [
+        "&7Récoltez &f{objectif} &7ressources : verrues, patates,",
+        "&7carottes, blé, cannes à sucre, cultures",
+        "&7modées, melons et citrouilles."
+      ],
+      "recompenses": []
+    },
+    "pierre": {
+      "actif": true,
+      "nom": "&7Mineur légendaire",
+      "type": "CASSER_BLOC",
+      "cibles": ["STONE"],
+      "objectif": 500000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "STONE",
+      "description": [
+        "&7Minez &f{objectif} &7blocs de stone."
+      ],
+      "recompenses": []
+    },
+    "paille": {
+      "actif": true,
+      "nom": "&eArtisan de paille",
+      "type": "CRAFTER",
+      "cibles": ["HAY_BLOCK"],
+      "objectif": 50000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "HAY_BLOCK",
+      "description": [
+        "&7Craftez &f{objectif} &7blocs de paille."
+      ],
+      "recompenses": []
+    },
+    "chair": {
+      "actif": true,
+      "nom": "&2Marchand de chair putréfiée",
+      "type": "VENDRE",
+      "cibles": ["ROTTEN_FLESH"],
+      "objectif": 250000,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "ROTTEN_FLESH",
+      "description": [
+        "&7Vendez &f{objectif} &7chairs putréfiées au shop."
+      ],
+      "recompenses": []
+    },
+    "champion": {
+      "actif": true,
+      "nom": "&6Champion des événements",
+      "type": "GAGNER_EVENEMENT",
+      "cibles": [],
+      "objectif": 1,
+      "par-membre": 0,
+      "mondes": [],
+      "zones": [],
+      "poids": 10,
+      "icone": "NETHER_STAR",
+      "description": ["&7Gagnez un KOTH, un Totem, un Drapeau,", "&7un concours de Pêche ou un event Farm."],
       "recompenses": []
     }
   }

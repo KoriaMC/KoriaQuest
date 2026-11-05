@@ -116,10 +116,17 @@ public final class QuestCatalog {
                 problems.add(where + " : zone inconnue '" + z + "' (WILDERNESS, SAFEZONE, WARZONE, OWN, ALLY, ENEMY)");
             }
         }
+        List<String> toolNames = Items.stringList(q, "outils");
+        for (String t : toolNames) {
+            if (MaterialSet.parse(t) == null) {
+                problems.add(where + " : outil inconnu '" + t + "'");
+            }
+        }
+        MaterialSet tools = MaterialSet.of(toolNames, null, where);
         long perMember = scope == QuestScope.FACTION ? Math.max(0, q.getLong("par-membre")) : 0;
         return new QuestDefinition(scope, difficulty, id, q.getString("nom", id), type.getId(), targets, materials, names,
                 objective, perMember, worlds, zones, Math.max(1, q.getInt("poids", 1)), q.getString("icone", "PAPER"),
-                Items.stringList(q, "description"), Items.stringList(q, "recompenses"));
+                Items.stringList(q, "description"), Items.stringList(q, "recompenses"), tools);
     }
 
     public QuestDefinition get(QuestScope scope, String key) {

@@ -19,7 +19,7 @@
   "commande": {
     "nom": "quests",
     "alias": ["quest", "q"],
-    "description": "Quêtes hebdomadaires"
+    "description": "Quêtes journalières et quêtes de faction hebdomadaires"
   },
   "commandes": {
     "help": { "actif": true, "alias": ["?"], "permission": "koriaquest.command.help" },
@@ -72,7 +72,7 @@
     "ignorer-creatif": true,
     "ignorer-blocs-poses": true,
     "blocs-poses-memoire-max": 200000,
-    "ignorer-mobs-spawner": true,
+    "ignorer-mobs-spawner": false,
     "ignorer-mobs-oeufs": true,
     "delai-meme-victime-minutes": 30,
     "ignorer-meme-ip": true,
